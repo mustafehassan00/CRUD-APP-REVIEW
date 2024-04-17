@@ -27,7 +27,7 @@
 ✅8. In Postico, connect to the database you created, then use the SQL queries you've modified `database.sql` to:
   * Create your table.
   * Populate the table with seed data.
-9. Run `npm start` to start the server with `nodemon`.
+✅9. Run `npm start` to start the server with `nodemon`.
   * Or, kick it old-school and use `node server/server.js`.
-10. Go to `http://localhost:5001`.
+✅10. Go to `http://localhost:5001`.
 11. Build a CRUD app.

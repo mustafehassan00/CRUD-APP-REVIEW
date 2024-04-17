@@ -8,8 +8,7 @@ CREATE TABLE "us" (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(500) NOT NULL,
   "is_Hungry?" BOOLEAN,
-  "inserted_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
-  "updated_at" TIMESTAMPTZ NOT NULL DEFAULT now()
+  "inserted_at" TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 -- Seed Data Template:
@@ -21,17 +20,3 @@ INSERT INTO "us"
   ('Lexi', true),
   ('Heather', false);
   
--- Creates a trigger that handles the updated_at magic:
-  -- https://x-team.com/blog/automatic-timestamps-with-postgresql/
-CREATE OR REPLACE FUNCTION set_updated_at_to_now()
-RETURNS TRIGGER AS $$
-BEGIN
-  NEW.updated_at = NOW();
-  RETURN NEW;
-END;
-$$ LANGUAGE plpgsql;
-
-CREATE TRIGGER on_things_update
-BEFORE UPDATE ON "things"
-FOR EACH ROW
-EXECUTE PROCEDURE set_updated_at_to_now();
