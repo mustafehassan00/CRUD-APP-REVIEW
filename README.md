@@ -23,8 +23,8 @@
     * This will create the `node_modules/` folder.
 ✅5. In Postico, create and name your database.
 ✅6. Update `pool.js` to reflect the name you chose for your database.
-7. Modify the `CREATE TABLE` and `INSERT INTO` statements in the `database.sql` file to reflect what you are going to build.
-8. In Postico, connect to the database you created, then use the SQL queries you've modified `database.sql` to:
+✅7. Modify the `CREATE TABLE` and `INSERT INTO` statements in the `database.sql` file to reflect what you are going to build.
+✅8. In Postico, connect to the database you created, then use the SQL queries you've modified `database.sql` to:
   * Create your table.
   * Populate the table with seed data.
 9. Run `npm start` to start the server with `nodemon`.

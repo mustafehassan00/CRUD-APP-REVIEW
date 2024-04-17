@@ -4,22 +4,22 @@ DROP TRIGGER IF EXISTS "on_things_update" ON "things";
 DROP TABLE IF EXISTS "things";
 
 -- Table Schema Template:
-CREATE TABLE "things" (
+CREATE TABLE "us" (
   "id" SERIAL PRIMARY KEY,
   "name" VARCHAR(500) NOT NULL,
-  "is_nifty" BOOLEAN,
+  "is_Hungry?" BOOLEAN,
   "inserted_at" TIMESTAMPTZ NOT NULL DEFAULT now(),
   "updated_at" TIMESTAMPTZ NOT NULL DEFAULT now()
 );
 
 -- Seed Data Template:
-INSERT INTO "things"
-  ("name", "is_nifty")
+INSERT INTO "us"
+  ("name", "is_Hungry?")
   VALUES
-  ('Gizmo', true),
-  ('Gadget', true),
-  ('Bits', true),
-  ('Bobs', false);
+  ('Mustafe', true),
+  ('Mahad', true),
+  ('Lexi', true),
+  ('Heather', false);
   
 -- Creates a trigger that handles the updated_at magic:
   -- https://x-team.com/blog/automatic-timestamps-with-postgresql/
